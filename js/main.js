@@ -34,6 +34,13 @@ const app = createApp({
         }
     },
     methods:{
+        onDeleteBtn(deleteIndex){
+            const deleteAlert = confirm("delete?");
+
+            if (deleteAlert) {
+                this.tasksList.splice(deleteIndex, 1);
+            }
+        }
 
     }
 }).mount('#app')
